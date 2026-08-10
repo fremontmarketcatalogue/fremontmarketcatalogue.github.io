@@ -705,7 +705,7 @@
   }
 
   .field-row{
-    display:flex; flex-direction:column; gap:5px;
+    display:flex; flex-direction:column; justify-content:space-between; gap:5px;
     padding: 13px 0; border-bottom: 1px solid var(--border);
   }
   .field-row .f-label{
@@ -1852,6 +1852,7 @@
 const MARKETS = {
   texas: {
     code:"TX", label:"Texas", navLabel:"Search Dashboard", hideCodeInNav:true, group:"State",
+    permitType:"",
     jurisdiction:"",
     summaryJurisdiction:"",
     name:"",
@@ -1871,6 +1872,7 @@ const MARKETS = {
   },
   texas_angelina_county: {
     code:"TX", label:"Texas", group:"State", hideFromNav:true,
+    permitType:"",
     jurisdiction:"",
     name:"Angelina County",
     county:"",
@@ -1888,6 +1890,7 @@ const MARKETS = {
   },
   texas_bnsf: {
     code:"TX", label:"Texas", group:"State", hideFromNav:true,
+    permitType:"",
     jurisdiction:"",
     name:"Burlington Northern Santa Fe Railway (BNSF)",
     county:"",
@@ -1905,6 +1908,7 @@ const MARKETS = {
   },
   texas_brazoria_county: {
     code:"TX", label:"Texas", group:"State", hideFromNav:true,
+    permitType:"",
     jurisdiction:"Requires no aerial placement lashed to an existing strand.",
     name:"Brazoria County",
     county:"",
@@ -1922,6 +1926,7 @@ const MARKETS = {
   },
   texas_cherokee_county: {
     code:"TX", label:"Texas", group:"State", hideFromNav:true,
+    permitType:"",
     jurisdiction:"min. 5' from EOP",
     name:"Cherokee County",
     county:"",
@@ -1939,6 +1944,7 @@ const MARKETS = {
   },
   texas_city_of_abilene: {
     code:"TX", label:"Texas", group:"State", hideFromNav:true,
+    permitType:"",
     jurisdiction:"",
     name:"City of Abilene",
     county:"",
@@ -1956,6 +1962,7 @@ const MARKETS = {
   },
   texas_city_of_addison: {
     code:"TX", label:"Texas", group:"State", hideFromNav:true,
+    permitType:"",
     jurisdiction:"SSTCP Required",
     name:"City of Addison",
     county:"Dallas",
@@ -1973,6 +1980,7 @@ const MARKETS = {
   },
   texas_city_of_aledo: {
     code:"TX", label:"Texas", group:"State", hideFromNav:true,
+    permitType:"",
     jurisdiction:"",
     name:"City of Aledo",
     county:"Parker",
@@ -1990,6 +1998,7 @@ const MARKETS = {
   },
   texas_city_of_allen: {
     code:"TX", label:"Texas", group:"State", hideFromNav:true,
+    permitType:"",
     jurisdiction:"5' vertical separation for >12\" utiltity crossing,\nSSTCP Required",
     name:"City of Allen",
     county:"Collin",
@@ -2007,6 +2016,7 @@ const MARKETS = {
   },
   texas_city_of_alto: {
     code:"TX", label:"Texas", group:"State", hideFromNav:true,
+    permitType:"",
     jurisdiction:"",
     name:"City of Alto",
     county:"Cherokee",
@@ -2024,6 +2034,7 @@ const MARKETS = {
   },
   texas_city_of_alvarado: {
     code:"TX", label:"Texas", group:"State", hideFromNav:true,
+    permitType:"",
     jurisdiction:"",
     name:"City of Alvarado",
     county:"Johnson",
@@ -2041,6 +2052,7 @@ const MARKETS = {
   },
   texas_city_of_alvin: {
     code:"TX", label:"Texas", group:"State", hideFromNav:true,
+    permitType:"",
     jurisdiction:"",
     name:"City of Alvin",
     county:"",
@@ -2058,6 +2070,7 @@ const MARKETS = {
   },
   texas_city_of_amarillo: {
     code:"TX", label:"Texas", group:"State", hideFromNav:true,
+    permitType:"",
     jurisdiction:"No need to show utility lines",
     name:"City of Amarillo",
     county:"Potter/Randall",
@@ -2075,6 +2088,7 @@ const MARKETS = {
   },
   texas_city_of_anna: {
     code:"TX", label:"Texas", group:"State", hideFromNav:true,
+    permitType:"",
     jurisdiction:"Profile for all crossings only\nSSTCP required\nNo pedestals are allowed\n5' from utilities\nIf it is a generic closure on a street inside of a neighborhood, then a generic TCP will suffice. If it is intended to close roadways that impact the public at large, then a site-specific TCP would be needed.\nAssume typical tcp unless city states otherwise in correction",
     name:"City of Anna",
     county:"Collin",
@@ -2092,6 +2106,7 @@ const MARKETS = {
   },
   texas_city_of_argyle: {
     code:"TX", label:"Texas", group:"State", hideFromNav:true,
+    permitType:"",
     jurisdiction:"",
     name:"City of Argyle",
     county:"Denton",
@@ -2109,6 +2124,7 @@ const MARKETS = {
   },
   texas_city_of_arlington: {
     code:"TX", label:"Texas", group:"State", hideFromNav:true,
+    permitType:"",
     jurisdiction:"Minimum depth of cover under existing/proposed earthen channel 60\"\nMinimum depth under tree in median 72\"",
     name:"City of Arlington",
     county:"Tarrant",
@@ -2126,6 +2142,7 @@ const MARKETS = {
   },
   texas_city_of_aubrey: {
     code:"TX", label:"Texas", group:"State", hideFromNav:true,
+    permitType:"",
     jurisdiction:"1:50 scale for boring jobs\nbore profile",
     name:"City of Aubrey",
     county:"Denton",
@@ -2143,6 +2160,7 @@ const MARKETS = {
   },
   texas_city_of_austin: {
     code:"TX", label:"Texas", group:"State", hideFromNav:true,
+    permitType:"",
     jurisdiction:"",
     name:"City of Austin",
     county:"Travis",
@@ -2160,6 +2178,7 @@ const MARKETS = {
   },
   texas_city_of_balch_springs: {
     code:"TX", label:"Texas", group:"State", hideFromNav:true,
+    permitType:"",
     jurisdiction:"No aerial permit needed",
     name:"City of Balch Springs",
     county:"Dallas",
@@ -2177,6 +2196,7 @@ const MARKETS = {
   },
   texas_city_of_baytown: {
     code:"TX", label:"Texas", group:"State", hideFromNav:true,
+    permitType:"",
     jurisdiction:"",
     name:"City of Baytown",
     county:"",
@@ -2194,6 +2214,7 @@ const MARKETS = {
   },
   texas_city_of_beaumont: {
     code:"TX", label:"Texas", group:"State", hideFromNav:true,
+    permitType:"",
     jurisdiction:"",
     name:"City of Beaumont",
     county:"",
@@ -2211,6 +2232,7 @@ const MARKETS = {
   },
   texas_city_of_bedford: {
     code:"TX", label:"Texas", group:"State", hideFromNav:true,
+    permitType:"",
     jurisdiction:"SSTCP Required\nScaled drawings are not required unless specifically requested.",
     name:"City of Bedford",
     county:"Tarrant",
@@ -2228,6 +2250,7 @@ const MARKETS = {
   },
   texas_city_of_bellaire: {
     code:"TX", label:"Texas", group:"State", hideFromNav:true,
+    permitType:"",
     jurisdiction:"",
     name:"City of Bellaire",
     county:"Harris",
@@ -2245,6 +2268,7 @@ const MARKETS = {
   },
   texas_city_of_bellmead: {
     code:"TX", label:"Texas", group:"State", hideFromNav:true,
+    permitType:"",
     jurisdiction:"",
     name:"City of Bellmead",
     county:"McLennan ",
@@ -2262,6 +2286,7 @@ const MARKETS = {
   },
   texas_city_of_bellville: {
     code:"TX", label:"Texas", group:"State", hideFromNav:true,
+    permitType:"",
     jurisdiction:"",
     name:"City of Bellville",
     county:"",
@@ -2279,6 +2304,7 @@ const MARKETS = {
   },
   texas_city_of_belton: {
     code:"TX", label:"Texas", group:"State", hideFromNav:true,
+    permitType:"",
     jurisdiction:"SSTCP are preferred over typicals",
     name:"City of Belton",
     county:"",
@@ -2296,6 +2322,7 @@ const MARKETS = {
   },
   texas_city_of_benbrook: {
     code:"TX", label:"Texas", group:"State", hideFromNav:true,
+    permitType:"",
     jurisdiction:"",
     name:"City of Benbrook",
     county:"Tarrant",
@@ -2313,6 +2340,7 @@ const MARKETS = {
   },
   texas_city_of_breckenridge: {
     code:"TX", label:"Texas", group:"State", hideFromNav:true,
+    permitType:"",
     jurisdiction:"Buried only\nSSTCP Required",
     name:"City of Breckenridge",
     county:"",
@@ -2330,6 +2358,7 @@ const MARKETS = {
   },
   texas_city_of_brookshire: {
     code:"TX", label:"Texas", group:"State", hideFromNav:true,
+    permitType:"",
     jurisdiction:"",
     name:"City of Brookshire",
     county:"",
@@ -2347,6 +2376,7 @@ const MARKETS = {
   },
   texas_city_of_burleson: {
     code:"TX", label:"Texas", group:"State", hideFromNav:true,
+    permitType:"",
     jurisdiction:"Admin map only on ROW GIS",
     name:"City of Burleson",
     county:"Johnson/Tarrant",
@@ -2364,6 +2394,7 @@ const MARKETS = {
   },
   texas_city_of_burnet: {
     code:"TX", label:"Texas", group:"State", hideFromNav:true,
+    permitType:"",
     jurisdiction:"Buried only",
     name:"City of Burnet",
     county:"",
@@ -2381,6 +2412,7 @@ const MARKETS = {
   },
   texas_city_of_caddo_mills: {
     code:"TX", label:"Texas", group:"State", hideFromNav:true,
+    permitType:"",
     jurisdiction:"",
     name:"City of Caddo Mills",
     county:"Hunt",
@@ -2398,6 +2430,7 @@ const MARKETS = {
   },
   texas_city_of_carrollton: {
     code:"TX", label:"Texas", group:"State", hideFromNav:true,
+    permitType:"",
     jurisdiction:"",
     name:"City of Carrollton",
     county:"",
@@ -2415,6 +2448,7 @@ const MARKETS = {
   },
   texas_city_of_cedar_hill: {
     code:"TX", label:"Texas", group:"State", hideFromNav:true,
+    permitType:"",
     jurisdiction:"",
     name:"City of Cedar Hill",
     county:"Dallas/Ellis",
@@ -2432,6 +2466,7 @@ const MARKETS = {
   },
   texas_city_of_celina: {
     code:"TX", label:"Texas", group:"State", hideFromNav:true,
+    permitType:"",
     jurisdiction:"Downloadable plats\nSubmit Aramis prints with a Google Map\nCity requires TxDOT approval and prints\nScaled not required\nAramis style prints\nUtilities not needed",
     name:"City of Celina",
     county:"Denton/Collin",
@@ -2449,6 +2484,7 @@ const MARKETS = {
   },
   texas_city_of_cleburne: {
     code:"TX", label:"Texas", group:"State", hideFromNav:true,
+    permitType:"",
     jurisdiction:"Scaled prints not required",
     name:"City of Cleburne",
     county:"Johnson",
@@ -2466,6 +2502,7 @@ const MARKETS = {
   },
   texas_city_of_colleyville: {
     code:"TX", label:"Texas", group:"State", hideFromNav:true,
+    permitType:"",
     jurisdiction:"All boring to be done on the sewer side of the street instead of the waterline side.\nPut a note on the permit to \"notify property owners 72 hours before start of work\"",
     name:"City of Colleyville",
     county:"Tarrant",
@@ -2483,6 +2520,7 @@ const MARKETS = {
   },
   texas_city_of_columbus: {
     code:"TX", label:"Texas", group:"State", hideFromNav:true,
+    permitType:"",
     jurisdiction:"",
     name:"City of Columbus",
     county:"",
@@ -2500,6 +2538,7 @@ const MARKETS = {
   },
   texas_city_of_combine: {
     code:"TX", label:"Texas", group:"State", hideFromNav:true,
+    permitType:"",
     jurisdiction:"Scaled not required\nAramis style prints\nCity requires TxDOT approval and prints",
     name:"City of Combine",
     county:"Dallas/Kaufman",
@@ -2517,6 +2556,7 @@ const MARKETS = {
   },
   texas_city_of_coppell: {
     code:"TX", label:"Texas", group:"State", hideFromNav:true,
+    permitType:"",
     jurisdiction:"",
     name:"City of Coppell",
     county:"Dallas",
@@ -2534,6 +2574,7 @@ const MARKETS = {
   },
   texas_city_of_copperas_cove: {
     code:"TX", label:"Texas", group:"State", hideFromNav:true,
+    permitType:"",
     jurisdiction:"Scaled not required\nSSTCP if closing a lane",
     name:"City of Copperas Cove",
     county:"Coryell",
@@ -2551,6 +2592,7 @@ const MARKETS = {
   },
   texas_city_of_corinth: {
     code:"TX", label:"Texas", group:"State", hideFromNav:true,
+    permitType:"",
     jurisdiction:"",
     name:"City of Corinth",
     county:"Denton",
@@ -2568,6 +2610,7 @@ const MARKETS = {
   },
   texas_city_of_crandall: {
     code:"TX", label:"Texas", group:"State", hideFromNav:true,
+    permitType:"",
     jurisdiction:"",
     name:"City of Crandall",
     county:"Kaufman",
@@ -2585,6 +2628,7 @@ const MARKETS = {
   },
   texas_city_of_crowley: {
     code:"TX", label:"Texas", group:"State", hideFromNav:true,
+    permitType:"",
     jurisdiction:"",
     name:"City of Crowley",
     county:"Tarrant",
@@ -2602,6 +2646,7 @@ const MARKETS = {
   },
   texas_city_of_dallas: {
     code:"TX", label:"Texas", group:"State", hideFromNav:true,
+    permitType:"",
     jurisdiction:"REFLECT AERIAL UNTIL FURTHER NOTICE -- Ask TL/QC\nSSTCP Required\n1' separation from water and 4' separation from Sewer",
     name:"City of Dallas",
     county:"Dallas",
@@ -2619,6 +2664,7 @@ const MARKETS = {
   },
   texas_city_of_dalworthington_gardens: {
     code:"TX", label:"Texas", group:"State", hideFromNav:true,
+    permitType:"",
     jurisdiction:"",
     name:"City of Dalworthington Gardens",
     county:"Tarrant",
@@ -2636,6 +2682,7 @@ const MARKETS = {
   },
   texas_city_of_denison: {
     code:"TX", label:"Texas", group:"State", hideFromNav:true,
+    permitType:"",
     jurisdiction:"",
     name:"City of Denison",
     county:"Grayson",
@@ -2653,6 +2700,7 @@ const MARKETS = {
   },
   texas_city_of_denton: {
     code:"TX", label:"Texas", group:"State", hideFromNav:true,
+    permitType:"",
     jurisdiction:"",
     name:"City of Denton",
     county:"Denton",
@@ -2670,6 +2718,7 @@ const MARKETS = {
   },
   texas_city_of_desoto: {
     code:"TX", label:"Texas", group:"State", hideFromNav:true,
+    permitType:"",
     jurisdiction:"SSTCP Required\ncannot place above city utilities, \nOnly Trench/open excavation, \nno bore if parallel to wtr/swr 12\" or larger",
     name:"City of DeSoto",
     county:"Dallas",
@@ -2687,6 +2736,7 @@ const MARKETS = {
   },
   texas_city_of_duncanville: {
     code:"TX", label:"Texas", group:"State", hideFromNav:true,
+    permitType:"",
     jurisdiction:"",
     name:"City of Duncanville",
     county:"Dallas",
@@ -2704,6 +2754,7 @@ const MARKETS = {
   },
   texas_city_of_eastland: {
     code:"TX", label:"Texas", group:"State", hideFromNav:true,
+    permitType:"",
     jurisdiction:"ARAMIS w/typ",
     name:"City of Eastland",
     county:"Eastland",
@@ -2721,6 +2772,7 @@ const MARKETS = {
   },
   texas_city_of_el_paso: {
     code:"TX", label:"Texas", group:"State", hideFromNav:true,
+    permitType:"",
     jurisdiction:"ROW usually placed on edge of sidewalk",
     name:"City of El Paso",
     county:"El Paso",
@@ -2738,6 +2790,7 @@ const MARKETS = {
   },
   texas_city_of_ennis: {
     code:"TX", label:"Texas", group:"State", hideFromNav:true,
+    permitType:"",
     jurisdiction:"If TxDOT, we still need a city permit as well.",
     name:"City of Ennis",
     county:"Ellis",
@@ -2755,6 +2808,7 @@ const MARKETS = {
   },
   texas_city_of_euless: {
     code:"TX", label:"Texas", group:"State", hideFromNav:true,
+    permitType:"",
     jurisdiction:"",
     name:"City of Euless",
     county:"Tarrant",
@@ -2772,6 +2826,7 @@ const MARKETS = {
   },
   texas_city_of_farmers_branch: {
     code:"TX", label:"Texas", group:"State", hideFromNav:true,
+    permitType:"",
     jurisdiction:"Buried only\nPlace 3' minimum BOC\nStay 5' from fire hydrant",
     name:"City of Farmers Branch",
     county:"Dallas",
@@ -2789,6 +2844,7 @@ const MARKETS = {
   },
   texas_city_of_fate: {
     code:"TX", label:"Texas", group:"State", hideFromNav:true,
+    permitType:"",
     jurisdiction:"bore profiles xing city utilities",
     name:"City of Fate",
     county:"Rockwall",
@@ -2806,6 +2862,7 @@ const MARKETS = {
   },
   texas_city_of_forney: {
     code:"TX", label:"Texas", group:"State", hideFromNav:true,
+    permitType:"",
     jurisdiction:"Scaled not required, must show google aerial plan view overlay",
     name:"City of Forney",
     county:"Kaufman",
@@ -2823,6 +2880,7 @@ const MARKETS = {
   },
   texas_city_of_fort_worth: {
     code:"TX", label:"Texas", group:"State", hideFromNav:true,
+    permitType:"",
     jurisdiction:"Ft worth Permit required even if it is a TxDOT road\n\nUsername: DairiR\nPassword: JDPS156ela=>",
     name:"City of Fort Worth",
     county:"Tarrant",
@@ -2840,6 +2898,7 @@ const MARKETS = {
   },
   texas_city_of_friendswood: {
     code:"TX", label:"Texas", group:"State", hideFromNav:true,
+    permitType:"",
     jurisdiction:"",
     name:"City of Friendswood",
     county:"Harris/Galveston",
@@ -2857,6 +2916,7 @@ const MARKETS = {
   },
   texas_city_of_frisco: {
     code:"TX", label:"Texas", group:"State", hideFromNav:true,
+    permitType:"",
     jurisdiction:"",
     name:"City of Frisco",
     county:"Collin/Denton",
@@ -2874,6 +2934,7 @@ const MARKETS = {
   },
   texas_city_of_gainesville: {
     code:"TX", label:"Texas", group:"State", hideFromNav:true,
+    permitType:"",
     jurisdiction:"No permit required: City of Gainesville does not require ROW from us. Since AT&T is a public utility, we don’t require a right of way permit. However, you are required to follow all state laws for line locates.",
     name:"City of Gainesville",
     county:"Cooke",
@@ -2891,6 +2952,7 @@ const MARKETS = {
   },
   texas_city_of_garland: {
     code:"TX", label:"Texas", group:"State", hideFromNav:true,
+    permitType:"",
     jurisdiction:"SSTCP Required",
     name:"City of Garland",
     county:"Dallas",
@@ -2908,6 +2970,7 @@ const MARKETS = {
   },
   texas_city_of_glenn_heights: {
     code:"TX", label:"Texas", group:"State", hideFromNav:true,
+    permitType:"",
     jurisdiction:"Scale NOT REQUIRED\nSSTCP Required\nCall out easements (width, type, and recordation\nnumber if available)",
     name:"City of Glenn Heights",
     county:"Dallas/Ellis",
@@ -2925,6 +2988,7 @@ const MARKETS = {
   },
   texas_city_of_granbury: {
     code:"TX", label:"Texas", group:"State", hideFromNav:true,
+    permitType:"",
     jurisdiction:"Vertical Bore Profiles that Cross Utilities & (1\"=4') \nor 1\" = 5'\nTypical TCPs are allowed for Minor Work, Major work \nthat requires a lane closure, Flagging, multi phase \nplan will require Site Specific ",
     name:"City of Granbury",
     county:"Hood",
@@ -2942,6 +3006,7 @@ const MARKETS = {
   },
   texas_city_of_grand_prairie: {
     code:"TX", label:"Texas", group:"State", hideFromNav:true,
+    permitType:"",
     jurisdiction:"",
     name:"City of Grand Prairie",
     county:"Dallas/Tarrant/Ellis",
@@ -2959,6 +3024,7 @@ const MARKETS = {
   },
   texas_city_of_grapevine: {
     code:"TX", label:"Texas", group:"State", hideFromNav:true,
+    permitType:"",
     jurisdiction:"Scale 1\" = 100'\nUtilities shown within 10' of proposed line\nMUTCD TCP accepted",
     name:"City of Grapevine",
     county:"Dallas/Tarrant/Denton",
@@ -2976,6 +3042,7 @@ const MARKETS = {
   },
   texas_city_of_greenville: {
     code:"TX", label:"Texas", group:"State", hideFromNav:true,
+    permitType:"",
     jurisdiction:"Call out easements (width, type, and recordation number if available)",
     name:"City of Greenville",
     county:"Hunt",
@@ -2993,6 +3060,7 @@ const MARKETS = {
   },
   texas_city_of_haltom: {
     code:"TX", label:"Texas", group:"State", hideFromNav:true,
+    permitType:"",
     jurisdiction:"",
     name:"City of Haltom",
     county:"Tarrant",
@@ -3010,6 +3078,7 @@ const MARKETS = {
   },
   texas_city_of_haslet: {
     code:"TX", label:"Texas", group:"State", hideFromNav:true,
+    permitType:"",
     jurisdiction:"SSTCP ",
     name:"City of Haslet",
     county:"Tarrant/Denton",
@@ -3027,6 +3096,7 @@ const MARKETS = {
   },
   texas_city_of_heath: {
     code:"TX", label:"Texas", group:"State", hideFromNav:true,
+    permitType:"",
     jurisdiction:"Buried only\nSSTCP ",
     name:"City of Heath",
     county:"Rockwall/Kaufman",
@@ -3044,6 +3114,7 @@ const MARKETS = {
   },
   texas_city_of_hempstead: {
     code:"TX", label:"Texas", group:"State", hideFromNav:true,
+    permitType:"",
     jurisdiction:"",
     name:"City of Hempstead",
     county:"",
@@ -3061,6 +3132,7 @@ const MARKETS = {
   },
   texas_city_of_hillsboro: {
     code:"TX", label:"Texas", group:"State", hideFromNav:true,
+    permitType:"",
     jurisdiction:"",
     name:"City of Hillsboro",
     county:"Hill",
@@ -3078,6 +3150,7 @@ const MARKETS = {
   },
   texas_city_of_houston: {
     code:"TX", label:"Texas", group:"State", hideFromNav:true,
+    permitType:"",
     jurisdiction:"Row GIS only to confirm jurisdiction",
     name:"City of Houston",
     county:"Harris",
@@ -3095,6 +3168,7 @@ const MARKETS = {
   },
   texas_city_of_hurst: {
     code:"TX", label:"Texas", group:"State", hideFromNav:true,
+    permitType:"",
     jurisdiction:"Only buried required",
     name:"City of Hurst",
     county:"Tarrant",
@@ -3112,6 +3186,7 @@ const MARKETS = {
   },
   texas_city_of_hutchins: {
     code:"TX", label:"Texas", group:"State", hideFromNav:true,
+    permitType:"",
     jurisdiction:"",
     name:"City of Hutchins",
     county:"Dallas",
@@ -3129,6 +3204,7 @@ const MARKETS = {
   },
   texas_city_of_irving: {
     code:"TX", label:"Texas", group:"State", hideFromNav:true,
+    permitType:"",
     jurisdiction:"Aramis with water & sewer\nRight of way, utility easements and back of curb with \ntheir dimensions and proposed centerline are all to \nbe shown on all permitted prints.",
     name:"City of Irving",
     county:"Dallas",
@@ -3146,6 +3222,7 @@ const MARKETS = {
   },
   texas_city_of_joshua: {
     code:"TX", label:"Texas", group:"State", hideFromNav:true,
+    permitType:"",
     jurisdiction:"",
     name:"City of Joshua",
     county:"Johnson County",
@@ -3163,6 +3240,7 @@ const MARKETS = {
   },
   texas_city_of_kaufman: {
     code:"TX", label:"Texas", group:"State", hideFromNav:true,
+    permitType:"",
     jurisdiction:"",
     name:"City of Kaufman",
     county:"Kaufman",
@@ -3180,6 +3258,7 @@ const MARKETS = {
   },
   texas_city_of_keene: {
     code:"TX", label:"Texas", group:"State", hideFromNav:true,
+    permitType:"",
     jurisdiction:"Typical TCP accepted only with a map that references \nwhere the typical will be utilized\nScaled not required",
     name:"City of Keene",
     county:"Johnson County",
@@ -3197,6 +3276,7 @@ const MARKETS = {
   },
   texas_city_of_keller: {
     code:"TX", label:"Texas", group:"State", hideFromNav:true,
+    permitType:"",
     jurisdiction:"",
     name:"City of Keller",
     county:"",
@@ -3214,6 +3294,7 @@ const MARKETS = {
   },
   texas_city_of_la_porte: {
     code:"TX", label:"Texas", group:"State", hideFromNav:true,
+    permitType:"",
     jurisdiction:"",
     name:"City of La Porte",
     county:"",
@@ -3231,6 +3312,7 @@ const MARKETS = {
   },
   texas_city_of_lake_worth: {
     code:"TX", label:"Texas", group:"State", hideFromNav:true,
+    permitType:"",
     jurisdiction:"",
     name:"City of Lake Worth",
     county:"Tarrant",
@@ -3248,6 +3330,7 @@ const MARKETS = {
   },
   texas_city_of_lakeway: {
     code:"TX", label:"Texas", group:"State", hideFromNav:true,
+    permitType:"",
     jurisdiction:"",
     name:"City of Lakeway",
     county:"Travis",
@@ -3265,6 +3348,7 @@ const MARKETS = {
   },
   texas_city_of_lampasas: {
     code:"TX", label:"Texas", group:"State", hideFromNav:true,
+    permitType:"",
     jurisdiction:"",
     name:"City of Lampasas",
     county:"Lampasas",
@@ -3282,6 +3366,7 @@ const MARKETS = {
   },
   texas_city_of_lancaster: {
     code:"TX", label:"Texas", group:"State", hideFromNav:true,
+    permitType:"",
     jurisdiction:"",
     name:"City of Lancaster",
     county:"Dallas",
@@ -3299,6 +3384,7 @@ const MARKETS = {
   },
   texas_city_of_leander: {
     code:"TX", label:"Texas", group:"State", hideFromNav:true,
+    permitType:"",
     jurisdiction:"",
     name:"City of Leander",
     county:"",
@@ -3316,6 +3402,7 @@ const MARKETS = {
   },
   texas_city_of_lewisville: {
     code:"TX", label:"Texas", group:"State", hideFromNav:true,
+    permitType:"",
     jurisdiction:"SSTCP Required",
     name:"City of Lewisville",
     county:"",
@@ -3333,6 +3420,7 @@ const MARKETS = {
   },
   texas_city_of_liberty: {
     code:"TX", label:"Texas", group:"State", hideFromNav:true,
+    permitType:"",
     jurisdiction:"",
     name:"City of Liberty",
     county:"Liberty",
@@ -3350,6 +3438,7 @@ const MARKETS = {
   },
   texas_city_of_liberty_hill: {
     code:"TX", label:"Texas", group:"State", hideFromNav:true,
+    permitType:"",
     jurisdiction:"",
     name:"City of Liberty Hill",
     county:"Williamson",
@@ -3367,6 +3456,7 @@ const MARKETS = {
   },
   texas_city_of_little_elm: {
     code:"TX", label:"Texas", group:"State", hideFromNav:true,
+    permitType:"",
     jurisdiction:"Profile for all crossings only",
     name:"City of Little Elm",
     county:"Denton",
@@ -3384,6 +3474,7 @@ const MARKETS = {
   },
   texas_city_of_lowry_crossing: {
     code:"TX", label:"Texas", group:"State", hideFromNav:true,
+    permitType:"",
     jurisdiction:"",
     name:"City of Lowry Crossing",
     county:"Collin",
@@ -3401,6 +3492,7 @@ const MARKETS = {
   },
   texas_city_of_lucas: {
     code:"TX", label:"Texas", group:"State", hideFromNav:true,
+    permitType:"",
     jurisdiction:"TxDOT must be approved before we can submit to the city",
     name:"City of Lucas",
     county:"Collin",
@@ -3418,6 +3510,7 @@ const MARKETS = {
   },
   texas_city_of_mansfield: {
     code:"TX", label:"Texas", group:"State", hideFromNav:true,
+    permitType:"",
     jurisdiction:"Scaled NOT REQUIRED",
     name:"City of Mansfield",
     county:"Tarrant/Johnson/Ellis",
@@ -3435,6 +3528,7 @@ const MARKETS = {
   },
   texas_city_of_marlin: {
     code:"TX", label:"Texas", group:"State", hideFromNav:true,
+    permitType:"",
     jurisdiction:"",
     name:"City of Marlin",
     county:"Falls",
@@ -3452,6 +3546,7 @@ const MARKETS = {
   },
   texas_city_of_mckinney: {
     code:"TX", label:"Texas", group:"State", hideFromNav:true,
+    permitType:"",
     jurisdiction:"Minor - Less than 2000', less than 2 road crossings \n           - use 1:40 scale\n           - no utilities & bore profile\n\nMajor - More than 2000' or 2 or more road crossings \n           - use 1:100 scale\n           - w/ utilities & bore profile\n\nInclude TXDOT submittal in City Permit\nPULL Through does not need a permit\nNo Aerial permit needed if  fewer than 10 Poles\nCross out typical TCPs that are not applicable ",
     name:"City of McKinney",
     county:"Collin County",
@@ -3469,6 +3564,7 @@ const MARKETS = {
   },
   texas_city_of_mclendon_chisholm: {
     code:"TX", label:"Texas", group:"State", hideFromNav:true,
+    permitType:"",
     jurisdiction:"No row permit needed",
     name:"City of McLendon Chisholm",
     county:"Rockwall/Kaufman",
@@ -3486,6 +3582,7 @@ const MARKETS = {
   },
   texas_city_of_melissa: {
     code:"TX", label:"Texas", group:"State", hideFromNav:true,
+    permitType:"",
     jurisdiction:"",
     name:"City of Melissa",
     county:"Collin",
@@ -3503,6 +3600,7 @@ const MARKETS = {
   },
   texas_city_of_mesquite: {
     code:"TX", label:"Texas", group:"State", hideFromNav:true,
+    permitType:"",
     jurisdiction:"",
     name:"City of Mesquite",
     county:"Dallas/Kaufman/Rockwall",
@@ -3520,6 +3618,7 @@ const MARKETS = {
   },
   texas_city_of_midlothian: {
     code:"TX", label:"Texas", group:"State", hideFromNav:true,
+    permitType:"",
     jurisdiction:"",
     name:"City of Midlothian",
     county:"Ellis",
@@ -3537,6 +3636,7 @@ const MARKETS = {
   },
   texas_city_of_mineral_wells: {
     code:"TX", label:"Texas", group:"State", hideFromNav:true,
+    permitType:"",
     jurisdiction:"",
     name:"City of Mineral Wells",
     county:"Parker/Palo Pinto",
@@ -3554,6 +3654,7 @@ const MARKETS = {
   },
   texas_city_of_north_richland_hills: {
     code:"TX", label:"Texas", group:"State", hideFromNav:true,
+    permitType:"",
     jurisdiction:"Scaled NOT REQUIRED",
     name:"City of North Richland Hills",
     county:"Tarrant",
@@ -3571,6 +3672,7 @@ const MARKETS = {
   },
   texas_city_of_oak_point: {
     code:"TX", label:"Texas", group:"State", hideFromNav:true,
+    permitType:"",
     jurisdiction:"Buried only",
     name:"City of Oak Point",
     county:"Denton",
@@ -3588,6 +3690,7 @@ const MARKETS = {
   },
   texas_city_of_odessa: {
     code:"TX", label:"Texas", group:"State", hideFromNav:true,
+    permitType:"",
     jurisdiction:"",
     name:"City of Odessa",
     county:"Ector/Midland",
@@ -3605,6 +3708,7 @@ const MARKETS = {
   },
   texas_city_of_ovilla: {
     code:"TX", label:"Texas", group:"State", hideFromNav:true,
+    permitType:"",
     jurisdiction:"",
     name:"City of Ovilla",
     county:"Dallas/Ellis",
@@ -3622,6 +3726,7 @@ const MARKETS = {
   },
   texas_city_of_paris: {
     code:"TX", label:"Texas", group:"State", hideFromNav:true,
+    permitType:"",
     jurisdiction:"",
     name:"City of Paris",
     county:"Lamar",
@@ -3639,6 +3744,7 @@ const MARKETS = {
   },
   texas_city_of_pasadena: {
     code:"TX", label:"Texas", group:"State", hideFromNav:true,
+    permitType:"",
     jurisdiction:"Include TXDOT submittal on City Permit",
     name:"City of Pasadena",
     county:"Harris",
@@ -3656,6 +3762,7 @@ const MARKETS = {
   },
   texas_city_of_pearland: {
     code:"TX", label:"Texas", group:"State", hideFromNav:true,
+    permitType:"",
     jurisdiction:"",
     name:"City of Pearland",
     county:"Brazoria",
@@ -3673,6 +3780,7 @@ const MARKETS = {
   },
   texas_city_of_pecan_hill: {
     code:"TX", label:"Texas", group:"State", hideFromNav:true,
+    permitType:"",
     jurisdiction:"",
     name:"City of Pecan Hill",
     county:"Ellis",
@@ -3690,6 +3798,7 @@ const MARKETS = {
   },
   texas_city_of_plano: {
     code:"TX", label:"Texas", group:"State", hideFromNav:true,
+    permitType:"",
     jurisdiction:"See template\nSSTCP Required\nNo scaled required per ordinance",
     name:"City of Plano",
     county:"Collin/Denton",
@@ -3707,6 +3816,7 @@ const MARKETS = {
   },
   texas_city_of_poolville: {
     code:"TX", label:"Texas", group:"State", hideFromNav:true,
+    permitType:"",
     jurisdiction:"",
     name:"City of Poolville",
     county:"Parker",
@@ -3724,6 +3834,7 @@ const MARKETS = {
   },
   texas_city_of_port_arthur: {
     code:"TX", label:"Texas", group:"State", hideFromNav:true,
+    permitType:"",
     jurisdiction:"",
     name:"City of Port Arthur",
     county:"",
@@ -3741,6 +3852,7 @@ const MARKETS = {
   },
   texas_city_of_princeton: {
     code:"TX", label:"Texas", group:"State", hideFromNav:true,
+    permitType:"",
     jurisdiction:"",
     name:"City of Princeton",
     county:"Collin",
@@ -3758,6 +3870,7 @@ const MARKETS = {
   },
   texas_city_of_red_oak: {
     code:"TX", label:"Texas", group:"State", hideFromNav:true,
+    permitType:"",
     jurisdiction:"No digging 1' from ROW\nARAMIS + TYP TCP",
     name:"City of Red Oak",
     county:"Ellis",
@@ -3775,6 +3888,7 @@ const MARKETS = {
   },
   texas_city_of_richardson: {
     code:"TX", label:"Texas", group:"State", hideFromNav:true,
+    permitType:"",
     jurisdiction:"SSTCP Required",
     name:"City of Richardson",
     county:"Dallas/Collin",
@@ -3792,6 +3906,7 @@ const MARKETS = {
   },
   texas_city_of_richland_hills: {
     code:"TX", label:"Texas", group:"State", hideFromNav:true,
+    permitType:"",
     jurisdiction:"",
     name:"City of Richland Hills",
     county:"Tarrant",
@@ -3809,6 +3924,7 @@ const MARKETS = {
   },
   texas_city_of_roanoke: {
     code:"TX", label:"Texas", group:"State", hideFromNav:true,
+    permitType:"",
     jurisdiction:"",
     name:"City of Roanoke",
     county:"Denton",
@@ -3826,6 +3942,7 @@ const MARKETS = {
   },
   texas_city_of_rockwall: {
     code:"TX", label:"Texas", group:"State", hideFromNav:true,
+    permitType:"",
     jurisdiction:"Profiles needed when crossing utilities ",
     name:"City of Rockwall",
     county:"Rockwall",
@@ -3843,6 +3960,7 @@ const MARKETS = {
   },
   texas_city_of_rosenberg: {
     code:"TX", label:"Texas", group:"State", hideFromNav:true,
+    permitType:"",
     jurisdiction:"",
     name:"City of Rosenberg",
     county:"",
@@ -3860,6 +3978,7 @@ const MARKETS = {
   },
   texas_city_of_royse: {
     code:"TX", label:"Texas", group:"State", hideFromNav:true,
+    permitType:"",
     jurisdiction:"Utilize Aramis prints",
     name:"City of Royse",
     county:"Rockwall/Colin/Hunt",
@@ -3877,6 +3996,7 @@ const MARKETS = {
   },
   texas_city_of_saginaw: {
     code:"TX", label:"Texas", group:"State", hideFromNav:true,
+    permitType:"",
     jurisdiction:"",
     name:"City of Saginaw",
     county:"Tarrant",
@@ -3894,6 +4014,7 @@ const MARKETS = {
   },
   texas_city_of_seabrook: {
     code:"TX", label:"Texas", group:"State", hideFromNav:true,
+    permitType:"",
     jurisdiction:"",
     name:"City of Seabrook",
     county:"",
@@ -3911,6 +4032,7 @@ const MARKETS = {
   },
   texas_city_of_seagoville: {
     code:"TX", label:"Texas", group:"State", hideFromNav:true,
+    permitType:"",
     jurisdiction:"Does not require scaled drawings, just make sure job prints are dimensioned so that spacing from row, utility easement and other utilities clearly indicate 2' off city utilities",
     name:"City of Seagoville",
     county:"Dallas/Kaufman",
@@ -3928,6 +4050,7 @@ const MARKETS = {
   },
   texas_city_of_sherman: {
     code:"TX", label:"Texas", group:"State", hideFromNav:true,
+    permitType:"",
     jurisdiction:"",
     name:"City of Sherman",
     county:"Grayson",
@@ -3945,6 +4068,7 @@ const MARKETS = {
   },
   texas_city_of_talty: {
     code:"TX", label:"Texas", group:"State", hideFromNav:true,
+    permitType:"",
     jurisdiction:"",
     name:"City of Talty",
     county:"Kaufman",
@@ -3962,6 +4086,7 @@ const MARKETS = {
   },
   texas_city_of_temple: {
     code:"TX", label:"Texas", group:"State", hideFromNav:true,
+    permitType:"",
     jurisdiction:"",
     name:"City of Temple",
     county:"Bell",
@@ -3979,6 +4104,7 @@ const MARKETS = {
   },
   texas_city_of_terrell: {
     code:"TX", label:"Texas", group:"State", hideFromNav:true,
+    permitType:"",
     jurisdiction:"SSTCP",
     name:"City of Terrell",
     county:"Kaufman",
@@ -3996,6 +4122,7 @@ const MARKETS = {
   },
   texas_city_of_the_colony: {
     code:"TX", label:"Texas", group:"State", hideFromNav:true,
+    permitType:"",
     jurisdiction:"",
     name:"City of The Colony",
     county:"Denton",
@@ -4013,6 +4140,7 @@ const MARKETS = {
   },
   texas_city_of_tomball: {
     code:"TX", label:"Texas", group:"State", hideFromNav:true,
+    permitType:"",
     jurisdiction:"",
     name:"City of Tomball",
     county:"",
@@ -4030,6 +4158,7 @@ const MARKETS = {
   },
   texas_city_of_tyler: {
     code:"TX", label:"Texas", group:"State", hideFromNav:true,
+    permitType:"",
     jurisdiction:"",
     name:"City of Tyler",
     county:"",
@@ -4047,6 +4176,7 @@ const MARKETS = {
   },
   texas_city_of_university_park: {
     code:"TX", label:"Texas", group:"State", hideFromNav:true,
+    permitType:"",
     jurisdiction:"SSTCP",
     name:"City of University Park",
     county:"Dallas",
@@ -4064,6 +4194,7 @@ const MARKETS = {
   },
   texas_city_of_waco: {
     code:"TX", label:"Texas", group:"State", hideFromNav:true,
+    permitType:"",
     jurisdiction:"",
     name:"City of Waco",
     county:"McLennan",
@@ -4081,6 +4212,7 @@ const MARKETS = {
   },
   texas_city_of_watauga: {
     code:"TX", label:"Texas", group:"State", hideFromNav:true,
+    permitType:"",
     jurisdiction:"",
     name:"City of Watauga",
     county:"Tarrant",
@@ -4098,6 +4230,7 @@ const MARKETS = {
   },
   texas_city_of_waxahachie: {
     code:"TX", label:"Texas", group:"State", hideFromNav:true,
+    permitType:"",
     jurisdiction:"",
     name:"City of Waxahachie",
     county:"Ellis",
@@ -4115,6 +4248,7 @@ const MARKETS = {
   },
   texas_city_of_weatherford: {
     code:"TX", label:"Texas", group:"State", hideFromNav:true,
+    permitType:"",
     jurisdiction:"",
     name:"City of Weatherford",
     county:"Parker",
@@ -4132,6 +4266,7 @@ const MARKETS = {
   },
   texas_city_of_webster: {
     code:"TX", label:"Texas", group:"State", hideFromNav:true,
+    permitType:"",
     jurisdiction:"",
     name:"City of Webster",
     county:"",
@@ -4149,6 +4284,7 @@ const MARKETS = {
   },
   texas_city_of_white_settlement: {
     code:"TX", label:"Texas", group:"State", hideFromNav:true,
+    permitType:"",
     jurisdiction:"",
     name:"City of White Settlement",
     county:"Tarrant",
@@ -4166,6 +4302,7 @@ const MARKETS = {
   },
   texas_collin_county: {
     code:"TX", label:"Texas", group:"State", hideFromNav:true,
+    permitType:"",
     jurisdiction:"Downloadable link for Plats available in Notes",
     name:"Collin County",
     county:"Collin",
@@ -4183,6 +4320,7 @@ const MARKETS = {
   },
   texas_dallas_county: {
     code:"TX", label:"Texas", group:"State", hideFromNav:true,
+    permitType:"",
     jurisdiction:"Buried only should be shown on prints",
     name:"Dallas County",
     county:"Dallas",
@@ -4200,6 +4338,7 @@ const MARKETS = {
   },
   texas_dart: {
     code:"TX", label:"Texas", group:"State", hideFromNav:true,
+    permitType:"",
     jurisdiction:"Needs aerial profile",
     name:"Dallas Area Rapid Transit (DART)",
     county:"",
@@ -4217,6 +4356,7 @@ const MARKETS = {
   },
   texas_denton_county: {
     code:"TX", label:"Texas", group:"State", hideFromNav:true,
+    permitType:"",
     jurisdiction:"",
     name:"Denton County",
     county:"Denton",
@@ -4234,6 +4374,7 @@ const MARKETS = {
   },
   texas_dgno: {
     code:"TX", label:"Texas", group:"State", hideFromNav:true,
+    permitType:"",
     jurisdiction:"",
     name:"Dallas, Garland & Northeastern Railroad (DGNO)",
     county:"",
@@ -4251,6 +4392,7 @@ const MARKETS = {
   },
   texas_ellis_county: {
     code:"TX", label:"Texas", group:"State", hideFromNav:true,
+    permitType:"",
     jurisdiction:"",
     name:"Ellis County",
     county:"Ellis",
@@ -4268,6 +4410,7 @@ const MARKETS = {
   },
   texas_fort_bend_county: {
     code:"TX", label:"Texas", group:"State", hideFromNav:true,
+    permitType:"",
     jurisdiction:"",
     name:"Fort Bend County",
     county:"",
@@ -4285,6 +4428,7 @@ const MARKETS = {
   },
   texas_harris_county: {
     code:"TX", label:"Texas", group:"State", hideFromNav:true,
+    permitType:"",
     jurisdiction:"Proposed buried should be 4' min. from curb/EOP",
     name:"Harris County",
     county:"",
@@ -4302,6 +4446,7 @@ const MARKETS = {
   },
   texas_hood_county: {
     code:"TX", label:"Texas", group:"State", hideFromNav:true,
+    permitType:"",
     jurisdiction:"",
     name:"Hood County",
     county:"",
@@ -4319,6 +4464,7 @@ const MARKETS = {
   },
   texas_johnson_county: {
     code:"TX", label:"Texas", group:"State", hideFromNav:true,
+    permitType:"",
     jurisdiction:"",
     name:"Johnson County",
     county:"Johnson",
@@ -4336,6 +4482,7 @@ const MARKETS = {
   },
   texas_kaufman_county: {
     code:"TX", label:"Texas", group:"State", hideFromNav:true,
+    permitType:"",
     jurisdiction:"",
     name:"Kaufman County",
     county:"Kaufman",
@@ -4353,6 +4500,7 @@ const MARKETS = {
   },
   texas_kiamichi_main_railroad_krr: {
     code:"TX", label:"Texas", group:"State", hideFromNav:true,
+    permitType:"",
     jurisdiction:"",
     name:"Kiamichi Main Railroad (KRR)",
     county:"",
@@ -4370,6 +4518,7 @@ const MARKETS = {
   },
   texas_leon_county: {
     code:"TX", label:"Texas", group:"State", hideFromNav:true,
+    permitType:"",
     jurisdiction:"",
     name:"Leon County",
     county:"",
@@ -4387,6 +4536,7 @@ const MARKETS = {
   },
   texas_liberty_county: {
     code:"TX", label:"Texas", group:"State", hideFromNav:true,
+    permitType:"",
     jurisdiction:"",
     name:"Liberty County",
     county:"",
@@ -4404,6 +4554,7 @@ const MARKETS = {
   },
   texas_montgomery_county: {
     code:"TX", label:"Texas", group:"State", hideFromNav:true,
+    permitType:"",
     jurisdiction:"Proposed buried should be 1'-3' from ROW\nShow dim from proposed path to ROW only",
     name:"Montgomery County",
     county:"",
@@ -4421,6 +4572,7 @@ const MARKETS = {
   },
   texas_nacogdoches_county: {
     code:"TX", label:"Texas", group:"State", hideFromNav:true,
+    permitType:"",
     jurisdiction:"",
     name:"Nacogdoches County",
     county:"",
@@ -4438,6 +4590,7 @@ const MARKETS = {
   },
   texas_national_rail_network: {
     code:"TX", label:"Texas", group:"State", hideFromNav:true,
+    permitType:"",
     jurisdiction:"",
     name:"National Rail Network",
     county:"",
@@ -4455,6 +4608,7 @@ const MARKETS = {
   },
   texas_north_central_texas_boundaries: {
     code:"TX", label:"Texas", group:"State", hideFromNav:true,
+    permitType:"",
     jurisdiction:"",
     name:"North Central Texas Boundaries",
     county:"",
@@ -4472,6 +4626,7 @@ const MARKETS = {
   },
   texas_ntta: {
     code:"TX", label:"Texas", group:"State", hideFromNav:true,
+    permitType:"",
     jurisdiction:"",
     name:"North Texas Tollway Authority (NTTA)",
     county:"",
@@ -4489,6 +4644,7 @@ const MARKETS = {
   },
   texas_potter_county: {
     code:"TX", label:"Texas", group:"State", hideFromNav:true,
+    permitType:"",
     jurisdiction:"",
     name:"Potter County",
     county:"Potter",
@@ -4506,6 +4662,7 @@ const MARKETS = {
   },
   texas_randall_county: {
     code:"TX", label:"Texas", group:"State", hideFromNav:true,
+    permitType:"",
     jurisdiction:"",
     name:"Randall County",
     county:"Randall",
@@ -4523,6 +4680,7 @@ const MARKETS = {
   },
   texas_robertson_county: {
     code:"TX", label:"Texas", group:"State", hideFromNav:true,
+    permitType:"",
     jurisdiction:"SSTCP",
     name:"Robertson County",
     county:"",
@@ -4540,6 +4698,7 @@ const MARKETS = {
   },
   texas_rusk_county: {
     code:"TX", label:"Texas", group:"State", hideFromNav:true,
+    permitType:"",
     jurisdiction:"Utilize Aramis prints",
     name:"Rusk County",
     county:"Rusk",
@@ -4557,6 +4716,7 @@ const MARKETS = {
   },
   texas_san_augustine_county: {
     code:"TX", label:"Texas", group:"State", hideFromNav:true,
+    permitType:"",
     jurisdiction:"Depth requirement of top of pipe to bottom of bar ditch shall be 60\"",
     name:"San Augustine County",
     county:"",
@@ -4574,6 +4734,7 @@ const MARKETS = {
   },
   texas_san_jacinto_county: {
     code:"TX", label:"Texas", group:"State", hideFromNav:true,
+    permitType:"",
     jurisdiction:"",
     name:"San Jacinto County",
     county:"",
@@ -4591,6 +4752,7 @@ const MARKETS = {
   },
   texas_shelby_county: {
     code:"TX", label:"Texas", group:"State", hideFromNav:true,
+    permitType:"",
     jurisdiction:"",
     name:"Shelby County",
     county:"",
@@ -4608,6 +4770,7 @@ const MARKETS = {
   },
   texas_smith_county: {
     code:"TX", label:"Texas", group:"State", hideFromNav:true,
+    permitType:"",
     jurisdiction:"No lines shall be placed in a culvert within 10' of the closest culvert",
     name:"Smith County",
     county:"",
@@ -4625,6 +4788,7 @@ const MARKETS = {
   },
   texas_tarrant_county: {
     code:"TX", label:"Texas", group:"State", hideFromNav:true,
+    permitType:"",
     jurisdiction:"",
     name:"Tarrant County",
     county:"Tarrant",
@@ -4642,6 +4806,7 @@ const MARKETS = {
   },
   texas_texas_railroad: {
     code:"TX", label:"Texas", group:"State", hideFromNav:true,
+    permitType:"",
     jurisdiction:"",
     name:"Texas Railroad",
     county:"",
@@ -4659,6 +4824,7 @@ const MARKETS = {
   },
   texas_town_of_bartonville: {
     code:"TX", label:"Texas", group:"State", hideFromNav:true,
+    permitType:"",
     jurisdiction:"",
     name:"Town of Bartonville",
     county:"",
@@ -4676,6 +4842,7 @@ const MARKETS = {
   },
   texas_town_of_cross_roads: {
     code:"TX", label:"Texas", group:"State", hideFromNav:true,
+    permitType:"",
     jurisdiction:"",
     name:"Town of Cross Roads",
     county:"Denton",
@@ -4693,6 +4860,7 @@ const MARKETS = {
   },
   texas_town_of_fairview: {
     code:"TX", label:"Texas", group:"State", hideFromNav:true,
+    permitType:"",
     jurisdiction:"",
     name:"Town of Fairview",
     county:"Collin",
@@ -4710,6 +4878,7 @@ const MARKETS = {
   },
   texas_town_of_flower_mound: {
     code:"TX", label:"Texas", group:"State", hideFromNav:true,
+    permitType:"",
     jurisdiction:"",
     name:"Town of Flower Mound",
     county:"Denton/Tarrant",
@@ -4727,6 +4896,7 @@ const MARKETS = {
   },
   texas_town_of_highland_park: {
     code:"TX", label:"Texas", group:"State", hideFromNav:true,
+    permitType:"",
     jurisdiction:"Scaled profile for bore and pull thru\nSSTCP\n",
     name:"Town of Highland Park",
     county:"Dallas",
@@ -4744,6 +4914,7 @@ const MARKETS = {
   },
   texas_town_of_northlake: {
     code:"TX", label:"Texas", group:"State", hideFromNav:true,
+    permitType:"",
     jurisdiction:"",
     name:"Town of Northlake",
     county:"Denton",
@@ -4761,6 +4932,7 @@ const MARKETS = {
   },
   texas_town_of_oak_ridge: {
     code:"TX", label:"Texas", group:"State", hideFromNav:true,
+    permitType:"",
     jurisdiction:"The Town of Oak Ridge is described as a bedroom community in Kaufman County. AT&T does not need to obtain permits in Texas counties. ",
     name:"Town of Oak Ridge",
     county:"Cooke",
@@ -4778,6 +4950,7 @@ const MARKETS = {
   },
   texas_town_of_pantego: {
     code:"TX", label:"Texas", group:"State", hideFromNav:true,
+    permitType:"",
     jurisdiction:"",
     name:"Town of Pantego",
     county:"Tarrant",
@@ -4795,6 +4968,7 @@ const MARKETS = {
   },
   texas_town_of_prosper: {
     code:"TX", label:"Texas", group:"State", hideFromNav:true,
+    permitType:"",
     jurisdiction:"Scale not required",
     name:"Town of Prosper",
     county:"Denton/Collin",
@@ -4812,6 +4986,7 @@ const MARKETS = {
   },
   texas_town_of_providence_village: {
     code:"TX", label:"Texas", group:"State", hideFromNav:true,
+    permitType:"",
     jurisdiction:"",
     name:"Town of Providence Village",
     county:"Denton",
@@ -4829,6 +5004,7 @@ const MARKETS = {
   },
   texas_town_of_sunnyvale: {
     code:"TX", label:"Texas", group:"State", hideFromNav:true,
+    permitType:"",
     jurisdiction:"",
     name:"Town of Sunnyvale",
     county:"",
@@ -4846,6 +5022,7 @@ const MARKETS = {
   },
   texas_town_of_weston: {
     code:"TX", label:"Texas", group:"State", hideFromNav:true,
+    permitType:"",
     jurisdiction:"Minor construction work in the Right-of-Way does not require a permit.  If the work involves ANY of the following, it is classified as a\n MAJOR REPAIR and does require a permit.\n\nA description of all existing City utilities that could potentially conflict with applicant's proposed route, including City profiles, if available, when crossing any City utility.\n\nMAJOR CONSTRUCTION PROJECTS\n - Projects greater than 500 lineal feet,\n - Projects involving street closures,\n - Projects requiring the cutting or breaking of pavement or curb,\n - Projects within a roadway that is scheduled to be widened, or\n - Projects that will take more than five (5) consecutive days to complete.\nMINOR CONSTRUCTION PROJECTS\n - Projects less than 500 lineal feet,\n - Projects that contain 2 or less street or creeks crossings,\n - Projects that will take 5 consecutive days or less to complete,\n - Projects that include only local repairs,",
     name:"Town of Weston",
     county:"Colin",
@@ -4863,6 +5040,7 @@ const MARKETS = {
   },
   texas_town_of_westover_hills: {
     code:"TX", label:"Texas", group:"State", hideFromNav:true,
+    permitType:"",
     jurisdiction:"",
     name:"Town of Westover Hills",
     county:"Tarrant",
@@ -4880,6 +5058,7 @@ const MARKETS = {
   },
   texas_txdot: {
     code:"TX", label:"Texas", group:"State", hideFromNav:true,
+    permitType:"",
     jurisdiction:"Permit per TXDOT road",
     name:"Texas Department of Transportation (TXDOT)",
     county:"",
@@ -4897,6 +5076,7 @@ const MARKETS = {
   },
   texas_uprr: {
     code:"TX", label:"Texas", group:"State", hideFromNav:true,
+    permitType:"",
     jurisdiction:"",
     name:"Union Pacific Railroad (UPRR)",
     county:"",
@@ -4914,6 +5094,7 @@ const MARKETS = {
   },
   texas_usdot_federal_rr_administration: {
     code:"TX", label:"Texas", group:"State", hideFromNav:true,
+    permitType:"",
     jurisdiction:"",
     name:"USDOT Federal RR Administration",
     county:"",
@@ -4931,6 +5112,7 @@ const MARKETS = {
   },
   texas_van_zandt_county: {
     code:"TX", label:"Texas", group:"State", hideFromNav:true,
+    permitType:"",
     jurisdiction:"Fiber Optic lines will be constructed no less than forty-eight inches (48\") lower than the lowest part of the drainage or bar ditch, and the drainage is to be considered at least two feet (2') below the center of the roadway. Communications cable will be constructed no less than (36\") lower than the lowest part of the drainage or bar ditch, and the drainage is to be considered at least two feet (2') below the center of the roadway",
     name:"Van Zandt County",
     county:"",
@@ -4948,6 +5130,7 @@ const MARKETS = {
   },
   illinois_city_of_aurora: {
     code:"IL", label:"Illinois", group:"State", hideFromNav:true,
+    permitType:"",
     jurisdiction:"- all work needs to be permitted\n- utilities are required\n- note must be on prints\n     \"MINIMUM 5' CLEARANCE FROM ANY EXISTING UTILITY\"",
     name:"City of Aurora",
     county:"Kane, Dupage, Will & Kendall",
@@ -4965,6 +5148,7 @@ const MARKETS = {
   },
   illinois_city_of_danville: {
     code:"IL", label:"Illinois", group:"State", hideFromNav:true,
+    permitType:"",
     jurisdiction:"- utilities are required",
     name:"City of Danville",
     county:"Vermillion",
@@ -4982,6 +5166,7 @@ const MARKETS = {
   },
   illinois_city_of_fairview_heights: {
     code:"IL", label:"Illinois", group:"State", hideFromNav:true,
+    permitType:"",
     jurisdiction:"",
     name:"City of Fairview Heights",
     county:"St. Clair",
@@ -4999,6 +5184,7 @@ const MARKETS = {
   },
   illinois_city_of_joliet: {
     code:"IL", label:"Illinois", group:"State", hideFromNav:true,
+    permitType:"",
     jurisdiction:"draw in the easements and permit all buried work",
     name:"City of Joliet",
     county:"Will",
@@ -5016,6 +5202,7 @@ const MARKETS = {
   },
   illinois_city_of_springfield: {
     code:"IL", label:"Illinois", group:"State", hideFromNav:true,
+    permitType:"",
     jurisdiction:"",
     name:"City of Springfield",
     county:"Sangamon",
@@ -5033,6 +5220,7 @@ const MARKETS = {
   },
   illinois_city_of_swansea: {
     code:"IL", label:"Illinois", group:"State", hideFromNav:true,
+    permitType:"",
     jurisdiction:"",
     name:"City of Swansea",
     county:"St. Clair",
@@ -5050,6 +5238,7 @@ const MARKETS = {
   },
   illinois_commerce_township: {
     code:"IL", label:"Illinois", group:"State", hideFromNav:true,
+    permitType:"",
     jurisdiction:"Permit within row and easement only",
     name:"Commerce Township",
     county:"",
@@ -5067,6 +5256,7 @@ const MARKETS = {
   },
   illinois_cook_county: {
     code:"IL", label:"Illinois", group:"State", hideFromNav:true,
+    permitType:"",
     jurisdiction:"",
     name:"Cook County",
     county:"",
@@ -5084,6 +5274,7 @@ const MARKETS = {
   },
   illinois_dupage_county: {
     code:"IL", label:"Illinois", group:"State", hideFromNav:true,
+    permitType:"",
     jurisdiction:"",
     name:"Dupage County",
     county:"",
@@ -5101,6 +5292,7 @@ const MARKETS = {
   },
   illinois_idot: {
     code:"IL", label:"Illinois", group:"State", hideFromNav:true,
+    permitType:"",
     jurisdiction:"- Directional Arrows for Lanes of Travel\n- Add the posted speed limit for the road\n- Aerial is required to be permitted",
     name:"Illinois Department of Transportation (IDOT)",
     county:"",
@@ -5118,6 +5310,7 @@ const MARKETS = {
   },
   illinois_kane_county: {
     code:"IL", label:"Illinois", group:"State", hideFromNav:true,
+    permitType:"",
     jurisdiction:"",
     name:"Kane County",
     county:"",
@@ -5135,6 +5328,7 @@ const MARKETS = {
   },
   illinois_kendall_county: {
     code:"IL", label:"Illinois", group:"State", hideFromNav:true,
+    permitType:"",
     jurisdiction:"",
     name:"Kendall County",
     county:"",
@@ -5152,6 +5346,7 @@ const MARKETS = {
   },
   illinois_lake_county: {
     code:"IL", label:"Illinois", group:"State", hideFromNav:true,
+    permitType:"",
     jurisdiction:"",
     name:"Lake County",
     county:"",
@@ -5169,6 +5364,7 @@ const MARKETS = {
   },
   illinois_mchenry_county: {
     code:"IL", label:"Illinois", group:"State", hideFromNav:true,
+    permitType:"",
     jurisdiction:"",
     name:"McHenry County",
     county:"",
@@ -5186,6 +5382,7 @@ const MARKETS = {
   },
   illinois_st_clair_county: {
     code:"IL", label:"Illinois", group:"State", hideFromNav:true,
+    permitType:"",
     jurisdiction:"",
     name:"St. Clair County",
     county:"",
@@ -5203,6 +5400,7 @@ const MARKETS = {
   },
   illinois_township_of_lake_villa: {
     code:"IL", label:"Illinois", group:"State", hideFromNav:true,
+    permitType:"",
     jurisdiction:"",
     name:"Township of Lake Villa",
     county:"Lake",
@@ -5220,6 +5418,7 @@ const MARKETS = {
   },
   illinois_township_of_newell: {
     code:"IL", label:"Illinois", group:"State", hideFromNav:true,
+    permitType:"",
     jurisdiction:"",
     name:"Township of Newell",
     county:"Vermillion",
@@ -5237,6 +5436,7 @@ const MARKETS = {
   },
   illinois_township_of_stookey: {
     code:"IL", label:"Illinois", group:"State", hideFromNav:true,
+    permitType:"",
     jurisdiction:"",
     name:"Township of Stookey",
     county:"St. Clair",
@@ -5254,6 +5454,7 @@ const MARKETS = {
   },
   illinois_vermillion_county: {
     code:"IL", label:"Illinois", group:"State", hideFromNav:true,
+    permitType:"",
     jurisdiction:"",
     name:"Vermillion County",
     county:"",
@@ -5271,6 +5472,7 @@ const MARKETS = {
   },
   illinois_village_of_arlington_heights: {
     code:"IL", label:"Illinois", group:"State", hideFromNav:true,
+    permitType:"",
     jurisdiction:"",
     name:"Village of Arlington Heights",
     county:"Cook",
@@ -5288,6 +5490,7 @@ const MARKETS = {
   },
   illinois_village_of_burr_ridge: {
     code:"IL", label:"Illinois", group:"State", hideFromNav:true,
+    permitType:"",
     jurisdiction:"",
     name:"Village of Burr Ridge",
     county:"Cook and Dupage",
@@ -5305,6 +5508,7 @@ const MARKETS = {
   },
   illinois_village_of_carpentersville: {
     code:"IL", label:"Illinois", group:"State", hideFromNav:true,
+    permitType:"",
     jurisdiction:"- Easements are required for buried works\n- all work needs to be permitted",
     name:"Village of Carpentersville",
     county:"Kane",
@@ -5322,6 +5526,7 @@ const MARKETS = {
   },
   illinois_village_of_east_dundee: {
     code:"IL", label:"Illinois", group:"State", hideFromNav:true,
+    permitType:"",
     jurisdiction:"",
     name:"Village of East Dundee",
     county:"Kane",
@@ -5339,6 +5544,7 @@ const MARKETS = {
   },
   illinois_village_of_flossmoor: {
     code:"IL", label:"Illinois", group:"State", hideFromNav:true,
+    permitType:"",
     jurisdiction:"",
     name:"Village of Flossmoor",
     county:"Cook",
@@ -5356,6 +5562,7 @@ const MARKETS = {
   },
   illinois_village_of_homewood: {
     code:"IL", label:"Illinois", group:"State", hideFromNav:true,
+    permitType:"",
     jurisdiction:"",
     name:"Village of Homewood",
     county:"Cook",
@@ -5373,6 +5580,7 @@ const MARKETS = {
   },
   illinois_village_of_lake_in_the_hills: {
     code:"IL", label:"Illinois", group:"State", hideFromNav:true,
+    permitType:"",
     jurisdiction:"",
     name:"Village of Lake in the Hills",
     county:"McHenry",
@@ -5390,6 +5598,7 @@ const MARKETS = {
   },
   illinois_village_of_libertyville: {
     code:"IL", label:"Illinois", group:"State", hideFromNav:true,
+    permitType:"",
     jurisdiction:"",
     name:"Village of Libertyville",
     county:"Lake",
@@ -5407,6 +5616,7 @@ const MARKETS = {
   },
   illinois_village_of_lindenhurst: {
     code:"IL", label:"Illinois", group:"State", hideFromNav:true,
+    permitType:"",
     jurisdiction:"",
     name:"Village of Lindenhurst",
     county:"Lake",
@@ -5424,6 +5634,7 @@ const MARKETS = {
   },
   illinois_village_of_melrose_park: {
     code:"IL", label:"Illinois", group:"State", hideFromNav:true,
+    permitType:"",
     jurisdiction:"- all work needs to be permitted and utilities are required",
     name:"Village of Melrose Park",
     county:"Cook",
@@ -5441,6 +5652,7 @@ const MARKETS = {
   },
   illinois_village_of_mt_prospect: {
     code:"IL", label:"Illinois", group:"State", hideFromNav:true,
+    permitType:"",
     jurisdiction:"- permit the aerial and buried on County road and\n  only the buried within the Village.",
     name:"Village of Mt. Prospect",
     county:"Cook",
@@ -5458,6 +5670,7 @@ const MARKETS = {
   },
   illinois_village_of_northfield: {
     code:"IL", label:"Illinois", group:"State", hideFromNav:true,
+    permitType:"",
     jurisdiction:"",
     name:"Village of Northfield",
     county:"Cook",
@@ -5475,6 +5688,7 @@ const MARKETS = {
   },
   illinois_village_of_schaumburg: {
     code:"IL", label:"Illinois", group:"State", hideFromNav:true,
+    permitType:"",
     jurisdiction:"",
     name:"Village of Schaumburg",
     county:"Cook",
@@ -5492,6 +5706,7 @@ const MARKETS = {
   },
   illinois_village_of_shorewood: {
     code:"IL", label:"Illinois", group:"State", hideFromNav:true,
+    permitType:"",
     jurisdiction:"",
     name:"Village of Shorewood",
     county:"Will",
@@ -5509,6 +5724,7 @@ const MARKETS = {
   },
   illinois_village_of_wilmette: {
     code:"IL", label:"Illinois", group:"State", hideFromNav:true,
+    permitType:"",
     jurisdiction:"",
     name:"Village of Wilmette",
     county:"Cook",
@@ -5526,6 +5742,7 @@ const MARKETS = {
   },
   illinois_will_county: {
     code:"IL", label:"Illinois", group:"State", hideFromNav:true,
+    permitType:"",
     jurisdiction:"",
     name:"Will County",
     county:"",
@@ -5543,6 +5760,7 @@ const MARKETS = {
   },
   michigan_berrien_county: {
     code:"MI", label:"Michigan", group:"State", hideFromNav:true,
+    permitType:"",
     jurisdiction:"- Place cable 1' from Row\n- Aerial placement is required to be shown\n- not to scale, show utilities\n- permit work within ROW and for aerial work include\n  work within 10' along ROW\n- On roads outside of platted sub-divisions the ROW\n  is typically 66 ft. wide",
     name:"Berrien County",
     county:"",
@@ -5560,6 +5778,7 @@ const MARKETS = {
   },
   michigan_city_of_ann_arbor: {
     code:"MI", label:"Michigan", group:"State", hideFromNav:true,
+    permitType:"",
     jurisdiction:"- ROW work only\n- show trees within and near ROW\n- profile views required for crossings only\n- pole hole at utilities with note about 1x1 hole\n  CALLOUT:  (POTHOLE 1' L X 1' W IN SIDEWALK/ GRASS)",
     name:"City of Ann Arbor",
     county:"Washtenaw",
@@ -5577,6 +5796,7 @@ const MARKETS = {
   },
   michigan_city_of_battle_creek: {
     code:"MI", label:"Michigan", group:"State", hideFromNav:true,
+    permitType:"",
     jurisdiction:"",
     name:"City of Battle Creek",
     county:"Calhoun",
@@ -5594,6 +5814,7 @@ const MARKETS = {
   },
   michigan_city_of_jackson: {
     code:"MI", label:"Michigan", group:"State", hideFromNav:true,
+    permitType:"",
     jurisdiction:"permit aerial & buried and Row & Easment",
     name:"City of Jackson",
     county:"Jackson",
@@ -5611,6 +5832,7 @@ const MARKETS = {
   },
   michigan_city_of_lansing: {
     code:"MI", label:"Michigan", group:"State", hideFromNav:true,
+    permitType:"",
     jurisdiction:"permit all work within the row",
     name:"City of Lansing",
     county:"Ingham",
@@ -5628,6 +5850,7 @@ const MARKETS = {
   },
   michigan_city_of_newaygo: {
     code:"MI", label:"Michigan", group:"State", hideFromNav:true,
+    permitType:"",
     jurisdiction:"",
     name:"City of Newaygo",
     county:"",
@@ -5645,6 +5868,7 @@ const MARKETS = {
   },
   michigan_city_of_oak_park: {
     code:"MI", label:"Michigan", group:"State", hideFromNav:true,
+    permitType:"",
     jurisdiction:"permit all work including easement work",
     name:"City of Oak Park",
     county:"Oakland",
@@ -5662,6 +5886,7 @@ const MARKETS = {
   },
   michigan_city_of_st_joseph: {
     code:"MI", label:"Michigan", group:"State", hideFromNav:true,
+    permitType:"",
     jurisdiction:"",
     name:"City of St. Joseph",
     county:"Berrien",
@@ -5679,6 +5904,7 @@ const MARKETS = {
   },
   michigan_city_of_sterling_heights: {
     code:"MI", label:"Michigan", group:"State", hideFromNav:true,
+    permitType:"",
     jurisdiction:"- utilities are required,\n- Show placement in ROW and easements\n- Aerial placement is required to be shown",
     name:"City of Sterling Heights",
     county:"Macomb",
@@ -5696,6 +5922,7 @@ const MARKETS = {
   },
   michigan_city_of_troy: {
     code:"MI", label:"Michigan", group:"State", hideFromNav:true,
+    permitType:"",
     jurisdiction:"",
     name:"City of Troy",
     county:"Oakland",
@@ -5713,6 +5940,7 @@ const MARKETS = {
   },
   michigan_city_of_warren: {
     code:"MI", label:"Michigan", group:"State", hideFromNav:true,
+    permitType:"",
     jurisdiction:"- show all above ground features and utilities in the Row, \n  ROW and Easement \n- Aerial placement is required to be shown\n- profile views are not required",
     name:"City of Warren",
     county:"Macomb",
@@ -5730,6 +5958,7 @@ const MARKETS = {
   },
   michigan_commerce_township: {
     code:"MI", label:"Michigan", group:"State", hideFromNav:true,
+    permitType:"",
     jurisdiction:"Permit within row and easement only",
     name:"Commerce Township",
     county:"",
@@ -5747,6 +5976,7 @@ const MARKETS = {
   },
   michigan_kalamazoo_county: {
     code:"MI", label:"Michigan", group:"State", hideFromNav:true,
+    permitType:"",
     jurisdiction:"- Buried fiber must be placed within 5' of the ROW LINE:\n  Westerly or Southerly\n- permit all work within the row",
     name:"Kalamazoo County",
     county:"",
@@ -5764,6 +5994,7 @@ const MARKETS = {
   },
   michigan_kent_county: {
     code:"MI", label:"Michigan", group:"State", hideFromNav:true,
+    permitType:"",
     jurisdiction:"permit all work within the row",
     name:"Kent County",
     county:"",
@@ -5781,6 +6012,7 @@ const MARKETS = {
   },
   michigan_livingston_county: {
     code:"MI", label:"Michigan", group:"State", hideFromNav:true,
+    permitType:"",
     jurisdiction:"",
     name:"Livingston County",
     county:"",
@@ -5798,6 +6030,7 @@ const MARKETS = {
   },
   michigan_macomb_county: {
     code:"MI", label:"Michigan", group:"State", hideFromNav:true,
+    permitType:"",
     jurisdiction:"- permit only what is within ROW, add utilities and draw in\n  the easement lines\n- easement placement is not required to be permitted\n- show all above ground features and utilities in the Row \n- Aerial placement is required to be shown\n- profile views are not required",
     name:"Macomb County",
     county:"",
@@ -5815,6 +6048,7 @@ const MARKETS = {
   },
   michigan_mdot: {
     code:"MI", label:"Michigan", group:"State", hideFromNav:true,
+    permitType:"",
     jurisdiction:"",
     name:"Michigan Department of Transportation (MDOT)",
     county:"",
@@ -5832,6 +6066,7 @@ const MARKETS = {
   },
   michigan_missaukee_county: {
     code:"MI", label:"Michigan", group:"State", hideFromNav:true,
+    permitType:"",
     jurisdiction:"",
     name:"Missaukee County",
     county:"",
@@ -5849,6 +6084,7 @@ const MARKETS = {
   },
   michigan_muskegon_county: {
     code:"MI", label:"Michigan", group:"State", hideFromNav:true,
+    permitType:"",
     jurisdiction:"- Buried Placement to be 31-33' from Centerline or further\n  the ROW is larger\n- ROW placement only\n- Aerial placement is required to be shown",
     name:"Muskegon County",
     county:"",
@@ -5866,6 +6102,7 @@ const MARKETS = {
   },
   michigan_newaygo_county: {
     code:"MI", label:"Michigan", group:"State", hideFromNav:true,
+    permitType:"",
     jurisdiction:"-10' under culvert crossing road",
     name:"Newaygo County",
     county:"",
@@ -5883,6 +6120,7 @@ const MARKETS = {
   },
   michigan_oakland_county: {
     code:"MI", label:"Michigan", group:"State", hideFromNav:true,
+    permitType:"",
     jurisdiction:"1' off row for buried path",
     name:"Oakland County",
     county:"",
@@ -5900,6 +6138,7 @@ const MARKETS = {
   },
   michigan_ottawa_county: {
     code:"MI", label:"Michigan", group:"State", hideFromNav:true,
+    permitType:"",
     jurisdiction:"- show all above ground features (poles, hydrants, etc.) and\n  and utilities in the ROW (add Utilties if provided by Byers)\n- ROW only, Easement work is not required\n- Aerial placement outside ROW is not required to be shown\n- Use MDOT TCPs, (one provided in template)",
     name:"Ottawa County",
     county:"",
@@ -5917,6 +6156,7 @@ const MARKETS = {
   },
   michigan_st_clair_county: {
     code:"MI", label:"Michigan", group:"State", hideFromNav:true,
+    permitType:"",
     jurisdiction:"permit all work within the row",
     name:"St. Clair County",
     county:"",
@@ -5934,6 +6174,7 @@ const MARKETS = {
   },
   michigan_summit_township: {
     code:"MI", label:"Michigan", group:"State", hideFromNav:true,
+    permitType:"",
     jurisdiction:"permit aerial & buried and Row & Easment",
     name:"Summit Township",
     county:"Jackson",
@@ -5951,6 +6192,7 @@ const MARKETS = {
   },
   michigan_washtenaw_county: {
     code:"MI", label:"Michigan", group:"State", hideFromNav:true,
+    permitType:"",
     jurisdiction:"- Easement is required to be shown\n- only permit within ROW. 1' off ROW \n- Easements are not required to be permitted",
     name:"Washtenaw County",
     county:"",
@@ -5968,6 +6210,7 @@ const MARKETS = {
   },
   ohio_columbiana_county: {
     code:"OH", label:"Ohio", group:"State", hideFromNav:true,
+    permitType:"",
     jurisdiction:"AERIAL INSTALLATIONS: \n- Must have permit.\n \nUNDERGROUND INSTALLATIONS: \n- Must have permit. \n- All storm sewer crossing must be a minimum of 60 inches below the storm pipe.\n- 5-foot isolation distance out to out from any Sanitary sewer and Sanitary manholes.\n- 2-foot vertical separation from any Sanitary sewer.\n- 2-foot isolation distance out to out from any Storm Sewer.\n- All utility crossings must have a 4-inch minimum over casing.\n- Tracer wire must be installed on all underground lines.\n- Line must be a minimum of 5 feet from edge of pavement or 2 feet beyond back of\nditch, whichever is greater.\n- The placement of hand holes and test stations will not be permitted to be placed in\nthe ditch line, within 2 feet of any storm sewer trench or road culvert trench, within 2\nfeet of the outside wall of any catch basin, inlet or storm manhole.",
     name:"Columbiana County",
     county:"",
@@ -5985,6 +6228,7 @@ const MARKETS = {
   },
   ohio_holmes_county: {
     code:"OH", label:"Ohio", group:"State", hideFromNav:true,
+    permitType:"",
     jurisdiction:"- Place cable 3' from ROW\n- permit work within ROW\n- FOR COUNTY ONLY:  Break the Buried Route into Segments\n  (STRUCTURE TO STRUCTURE)",
     name:"Holmes County",
     county:"",
@@ -6002,6 +6246,7 @@ const MARKETS = {
   },
   ohio_odot: {
     code:"OH", label:"Ohio", group:"State", hideFromNav:true,
+    permitType:"",
     jurisdiction:"- Place cable 5' from ROW\n- permit work within ROW\n- A minimum vertical clearance of 16.5 ft will be maintained over all State and Federal Highways. \n- No RR permits will be required \n- Permit Work is not required for PRIVATE ROADS",
     name:"Ohio Department of Transportation (ODOT)",
     county:"",
@@ -6019,6 +6264,7 @@ const MARKETS = {
   },
   ohio_tuscarawas_county: {
     code:"OH", label:"Ohio", group:"State", hideFromNav:true,
+    permitType:"",
     jurisdiction:"- Place cable 2' from ROW and permit work within ROW.\n- A separate right-of-way pemit application with a set of plans is required for each road. \n- All utilities should be installed within 5' of the outer ROW limits. \n- Above-grade installations shall be a minimum of 10' from the edge of the roadway surface and outside of the ditch.\n- Bore pits shall be at least 3' outside of the ditch, and casing shall extend continuously under the roadway surface and ditches.\n- Open cut of roadways shall not be permitted. \n- Drawn to Scale is required.\n- add: GENERAL NOTES (Tuscarawas County only)",
     name:"Tuscarawas County",
     county:"",
@@ -6036,6 +6282,7 @@ const MARKETS = {
   },
   ohio_wayne_county: {
     code:"OH", label:"Ohio", group:"State", hideFromNav:true,
+    permitType:"",
     jurisdiction:"- For PERMITTING purposes the footage shall be measured from ROW - Structure, only show the proposed permit footage within ROW.\n- Midspan clearance: 16'-6\"\n- No RR permits will be required",
     name:"Wayne County",
     county:"",
@@ -6574,7 +6821,7 @@ function buildSheetHtml(m, opts={}){
 
     ${isDashboardView ? `<div>
       <div class="depth-label">Jurisdiction Profile</div>
-      <div class="two-col" style="grid-template-columns: 1fr 1fr 1fr;">
+      <div class="two-col" style="grid-template-columns: 1fr 1fr 1fr 1fr;">
         <div class="field-row">
           <div class="f-label">Jurisdiction</div>
           <div class="f-value">${m.name || ''}</div>
@@ -6586,6 +6833,10 @@ function buildSheetHtml(m, opts={}){
         <div class="field-row">
           <div class="f-label">State</div>
           <div class="f-value">${hasMatch ? (m.label || '') : ''}</div>
+        </div>
+        <div class="field-row">
+          <div class="f-label">Permit Type</div>
+          <div class="f-value">${hasMatch ? (m.permitType || '') : ''}</div>
         </div>
       </div>
     </div>` : `<div class="two-col">
@@ -8194,6 +8445,7 @@ const SUMMARY_COLS = [
   { key:"name", label:"Jurisdiction", width:8, center:true, multiline:true },
   { key:"county", label:"County", width:8, center:true, multiline:true },
   { key:"marketColumn", label:"State", width:8, center:true, multiline:true },
+  { key:"permitType", label:"Permit Type", width:8, center:true, multiline:true },
   { key:"rowGis", label:"ROW GIS Link", width:7, mono:true, center:true, multiline:true, twoLine:true },
   { key:"jurisdiction", label:"Critical Requirement", width:8, long:true, multiline:true },
   { key:"template", label:"Template Link", width:5, center:true, twoLine:true },
@@ -8273,7 +8525,7 @@ function getActiveMarketsData(){
 // the same source of truth instead of maintaining a second copy that can
 // drift out of sync with the on-screen table.
 const COLUMN_GROUPS = [
-  { cols:['name','county','marketColumn','rowGis'], label:"Jurisdiction Profile", tone:"accent" },
+  { cols:['name','county','marketColumn','permitType','rowGis'], label:"Jurisdiction Profile", tone:"accent" },
   { cols:['jurisdiction','template','classification'], label:"Project Specifications", tone:"danger" },
   { cols:['conduitAlong','conduitAcross','conduitProfileReq'], label:"Underground", tone:"warning",
     subgroups: [
@@ -8718,7 +8970,7 @@ function renderGuides(animate=true){
     ${glossary}
   `;
 
-  const renderNow = ()=>{ sheetEl.classList.remove('sheet-plain'); sheetEl.innerHTML = html; };
+  const renderNow = ()=>{ sheetEl.classList.add('sheet-plain'); sheetEl.innerHTML = html; };
   if(animate){
     sheetEl.classList.add('fade');
     setTimeout(()=>{ renderNow(); sheetEl.classList.remove('fade'); }, 150);
@@ -9478,6 +9730,7 @@ function wireSummaryTable(){
       const newKey = `market_${marketIdSeq++}`;
       activeMarkets[newKey] = {
         code:"NEW", label:"", group:"State",
+        permitType:"",
         jurisdiction:"", criticalRequirementsByers:"", criticalRequirementsIndiaMastec:"", criticalRequirementsFOH:"", rowGis:"", template:"", classification:"",
         description:"", conduitAlong:"", conduitAcross:"", conduitProfileReq:"", aerialVerticalAlong:"", aerialVerticalAcross:"", aerialProfileReq:"",
         utilityPlan:"", utilityProfile:"", utilityReqLevel:"",
