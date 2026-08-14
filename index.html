@@ -1773,7 +1773,8 @@
           </button>
           <ul class="market-search-dropdown" id="marketSearchDropdown" role="listbox" aria-label="Jurisdiction suggestions"></ul>
         </div>
-        <span id="userEmailDisplay" style="font-size:12.5px; color: var(--muted); white-space:nowrap; margin-right:4px;"></span>
+        <span id="userEmailDisplay" style="font-size:12.5px; color: var(--muted); white-space:nowrap;"></span>
+        <a id="signOutLink" href="/cdn-cgi/access/logout" style="display:none; font-size:12.5px; color: var(--accent); white-space:nowrap; text-decoration:none; margin-right:4px;">Sign out</a>
         <div class="icon-toolbar">
           <button class="icon-btn" id="modeToggle" aria-label="Toggle color mode" data-tooltip="Color Mode">
             <svg class="sun" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><line x1="12" y1="2" x2="12" y2="4"/><line x1="12" y1="20" x2="12" y2="22"/><line x1="4.93" y1="4.93" x2="6.34" y2="6.34"/><line x1="17.66" y1="17.66" x2="19.07" y2="19.07"/><line x1="2" y1="12" x2="4" y2="12"/><line x1="20" y1="12" x2="22" y2="12"/><line x1="4.93" y1="19.07" x2="6.34" y2="17.66"/><line x1="17.66" y1="6.34" x2="19.07" y2="4.93"/></svg>
@@ -10202,14 +10203,17 @@ window.addEventListener('scroll', ()=>{
 </script>
 
 <script>
-  // Show the Cloudflare Access-authenticated user's email in the topbar.
-  // Only resolves when served through the Access-protected domain.
+  // Show the Cloudflare Access-authenticated user's email (and a sign-out
+  // link) in the topbar. Only resolves when served through the
+  // Access-protected domain.
   fetch('/cdn-cgi/access/get-identity', { credentials: 'include' })
     .then(function(res){ return res.ok ? res.json() : null; })
     .then(function(data){
       if (data && data.email) {
-        var el = document.getElementById('userEmailDisplay');
-        if (el) el.textContent = data.email;
+        var emailEl = document.getElementById('userEmailDisplay');
+        var signOutEl = document.getElementById('signOutLink');
+        if (emailEl) emailEl.textContent = data.email;
+        if (signOutEl) signOutEl.style.display = 'inline';
       }
     })
     .catch(function(){ /* not behind Access (e.g. local preview) — leave blank */ });
