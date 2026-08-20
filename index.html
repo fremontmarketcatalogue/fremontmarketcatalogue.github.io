@@ -1807,37 +1807,13 @@
   .eng-admin-note{ font-size:12.5px; color: var(--muted); text-align:center; margin-top:12px; }
   .eng-admin-note a{ color: var(--accent); cursor:pointer; text-decoration:underline; text-underline-offset:2px; }
 
-  /* ---------- FAQ header / search ---------- */
+  /* ---------- FAQ header ---------- */
   .faq-head-row{ display:flex; align-items:center; gap:10px; flex-wrap:wrap; margin: 0 0 4px; }
   .faq-count-pill{
     display:inline-flex; align-items:center; font-size:11.5px; font-weight:700;
     color: var(--accent); background: var(--accent-soft); border-radius:999px;
     padding:3px 10px; letter-spacing:.01em; white-space:nowrap;
   }
-  .faq-search-wrap{
-    position:relative; margin: 16px 0 22px;
-  }
-  .faq-search-wrap svg.faq-search-icon{
-    position:absolute; left:14px; top:50%; transform:translateY(-50%);
-    width:17px; height:17px; color: var(--muted); pointer-events:none;
-  }
-  .faq-search-input{
-    width:100%; font-family:'Inter', sans-serif; font-size:14px; font-weight:500;
-    color: var(--ink); background: var(--surface); border:1.5px solid var(--border);
-    border-radius:12px; padding:12px 40px 12px 40px; outline:none;
-    box-shadow: var(--shadow-xs); transition: border-color .15s ease, box-shadow .15s ease, background .3s var(--ease);
-  }
-  .faq-search-input::placeholder{ color: var(--muted); }
-  .faq-search-input:hover{ border-color: var(--border-strong); }
-  .faq-search-input:focus{ border-color: var(--accent); box-shadow: var(--shadow-focus); }
-  .faq-search-clear{
-    position:absolute; right:8px; top:50%; transform:translateY(-50%);
-    width:26px; height:26px; border-radius:8px; border:none; background:transparent;
-    color: var(--muted); cursor:pointer; display:flex; align-items:center; justify-content:center;
-    transition: background .15s ease, color .15s ease;
-  }
-  .faq-search-clear:hover{ background: var(--bg); color: var(--ink); }
-  .faq-search-clear svg{ width:15px; height:15px; }
 
   /* ---------- FAQ accordion (card style) ---------- */
   .faq-list{ display:flex; flex-direction:column; gap:10px; margin-bottom:6px; }
@@ -1850,7 +1826,6 @@
   }
   .faq-item:hover{ border-color: var(--border-strong); box-shadow: var(--shadow-sm); }
   .faq-item.expanded{ border-color: color-mix(in srgb, var(--accent) 45%, var(--border)); box-shadow: var(--shadow-md); }
-  .faq-item.faq-no-match{ display:none; }
   @keyframes faqItemIn{ to{ opacity:1; transform:none; } }
   .faq-list:not(.faq-list-static) .faq-item{ animation-delay: calc(var(--faq-i, 0) * 35ms); }
 
@@ -1908,22 +1883,6 @@
   .faq-item.helpful-answered .faq-helpful-btn{ display:none; }
   .faq-item.helpful-answered .faq-helpful-label{ display:none; }
   .faq-item.helpful-answered .faq-helpful-thanks{ display:inline-flex; }
-
-  .faq-empty-state{
-    display:flex; flex-direction:column; align-items:center; gap:10px; text-align:center;
-    padding: 46px 20px; color: var(--muted); font-size:13.5px;
-  }
-  /* The author rule above (display:flex) otherwise wins the cascade over the
-     browser's default UA rule for [hidden] (display:none), since author
-     stylesheets take precedence over UA stylesheets regardless of matching
-     specificity — so without this, the hidden attribute set/cleared by
-     updateFaqEmptyState() would be silently ignored and the panel would
-     stay visible (with stale text) even outside an active search. */
-  .faq-empty-state[hidden]{ display:none; }
-  .faq-empty-state svg{ width:34px; height:34px; color: var(--border-strong); }
-  .faq-empty-state b{ color: var(--ink-soft); font-weight:600; }
-
-  mark.faq-hl{ background: var(--accent-soft); color: var(--accent); border-radius:3px; padding:0 1px; }
 
   @media (prefers-reduced-motion: reduce){
     .faq-answer, .faq-toggle-icon, .faq-item{ transition:none; animation:none; opacity:1; transform:none; }
@@ -6863,7 +6822,6 @@ let isEditingFAQ = false;
 let homeActiveTab = "overview";
 let expandedFaqIds = new Set();
 let faqHelpfulAnswered = new Map(); // faq id -> 'yes' | 'no', purely client-side engagement state
-let faqSearchTerm = "";
 let summarySortKey = null;
 let summarySortDir = 1;
 let marketIdSeq = 1;
@@ -7298,25 +7256,37 @@ function updateTopbarTitleCount(){
   const textEl = document.getElementById('topbarTitleText');
   const countEl = document.getElementById('topbarTitleCount');
   if(!textEl || !countEl) return;
-  if(currentView === 'engineers'){
-    textEl.textContent = 'Engineer Contact Info';
-    countEl.textContent = '';
+  let label;
+  if(currentView === 'home'){
+    label = 'Home';
+  } else if(currentView === 'engineers'){
+    label = 'Engineer Contact Info';
+  } else if(currentView === 'summary'){
+    label = 'Market Summary';
   } else if(currentView === 'guides'){
-    textEl.textContent = 'Guides & Standards';
-    countEl.textContent = '';
+    label = '';
   } else if(currentView === 'faq'){
-    textEl.textContent = 'FAQ';
-    countEl.textContent = '';
+    label = '';
   } else if(currentView === 'documents'){
-    textEl.textContent = docsCurrentView === 'leave-form' ? 'Leave Form Request' : 'Documents';
-    countEl.textContent = '';
+    label = docsCurrentView === 'leave-form' ? 'Leave Form Request' : 'Documents';
   } else if(currentView === 'market' && MARKETS[currentKey] && MARKETS[currentKey].navLabel === "Search Dashboard"){
-    textEl.textContent = 'Search Dashboard';
-    countEl.textContent = '';
+    label = 'Search Dashboard';
+  } else if(currentView === 'market' && MARKETS[currentKey]){
+    label = MARKETS[currentKey].label || 'Cross-Market Requirements';
   } else {
-    textEl.textContent = 'Cross-Market Requirements';
-    countEl.textContent = '';
+    label = 'Cross-Market Requirements';
   }
+  textEl.textContent = label;
+  countEl.textContent = '';
+  updateBrowserTabTitle(label);
+}
+
+/* Keep the browser tab/title bar in sync with whichever section or market
+   the user has open, so switching tabs inside the app is reflected in the
+   actual browser tab name (and in the window/taskbar title). */
+var fmcBaseTitle = document.title;
+function updateBrowserTabTitle(label){
+  document.title = label ? (label + ' \u2013 ' + fmcBaseTitle) : fmcBaseTitle;
 }
 
 function applyMarketSearchFilter(){
@@ -10163,27 +10133,11 @@ function faqEscapeHtml(s){
   return (s||'').toString().replace(/</g,'&lt;');
 }
 
-/* Escapes a string for safe use inside a double-quoted HTML attribute. */
-function faqEscapeAttr(s){
-  return (s||'').toString().replace(/&/g,'&amp;').replace(/"/g,'&quot;').replace(/</g,'&lt;');
-}
-
-/* Wraps case-insensitive occurrences of `term` in <mark class="faq-hl"> within
-   an already-escaped HTML string. Used only for the read-only search view —
-   never touches the contenteditable admin markup. */
-function faqHighlight(escapedText, term){
-  if(!term) return escapedText;
-  const safeTerm = term.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-  const re = new RegExp('(' + safeTerm + ')', 'ig');
-  return escapedText.replace(re, '<mark class="faq-hl">$1</mark>');
-}
 
 /* ---------------- FAQ (accordion, admin-editable) ---------------- */
 function renderFAQ(animate=true){
   updateTopbarTitleCount();
   const editable = isAdminSignedIn && isEditingFAQ;
-  if(editable) faqSearchTerm = "";
-  const term = faqSearchTerm.trim().toLowerCase();
 
   const itemsHtml = FAQS.map((f, idx)=>{
     const expanded = editable || expandedFaqIds.has(f.id);
@@ -10191,7 +10145,6 @@ function renderFAQ(animate=true){
     const aRaw = (f.a||'').toString();
     const qVal = faqEscapeHtml(qRaw);
     const aVal = faqEscapeHtml(aRaw);
-    const matches = !term || qRaw.toLowerCase().includes(term) || aRaw.toLowerCase().includes(term);
     const qCe = editable ? ` contenteditable="true" data-field="q" data-placeholder="Question…"` : '';
     const aCe = editable ? ` contenteditable="true" data-field="a" data-placeholder="Answer…"` : '';
     const delBtn = editable
@@ -10201,7 +10154,7 @@ function renderFAQ(animate=true){
     const badge = editable ? '' : `<span class="faq-q-badge">${idx+1}</span>`;
     const questionInner = editable
       ? `<span class="faq-question-text"${qCe}>${qVal}</span>`
-      : `${badge}<span class="faq-question-text">${faqHighlight(qVal, term)}</span>${chevron}`;
+      : `${badge}<span class="faq-question-text">${qVal}</span>${chevron}`;
     const answered = faqHelpfulAnswered.get(f.id);
     const helpfulWidget = editable ? '' : `
         <div class="faq-helpful">
@@ -10211,7 +10164,7 @@ function renderFAQ(animate=true){
           <span class="faq-helpful-thanks">✓ Thanks for the feedback!</span>
         </div>`;
     return `
-      <div class="faq-item${expanded ? ' expanded' : ''}${editable ? ' editing' : ''}${answered ? ' helpful-answered' : ''}${matches ? '' : ' faq-no-match'}" data-id="${f.id}" style="--faq-i:${idx}">
+      <div class="faq-item${expanded ? ' expanded' : ''}${editable ? ' editing' : ''}${answered ? ' helpful-answered' : ''}" data-id="${f.id}" style="--faq-i:${idx}">
         <div class="faq-question-row">
           ${delBtn}
           <button type="button" class="faq-question" ${editable ? 'tabindex="-1"' : ''} aria-expanded="${expanded}">${questionInner}</button>
@@ -10219,7 +10172,7 @@ function renderFAQ(animate=true){
         <div class="faq-answer${expanded ? ' expanded' : ''}">
           <div class="faq-answer-inner"${aCe}>${editable
             ? aVal
-            : `<span class="faq-answer-text">${faqHighlight(aVal, term)}</span>${helpfulWidget}`
+            : `<span class="faq-answer-text">${aVal}</span>${helpfulWidget}`
           }</div>
         </div>
       </div>`;
@@ -10232,28 +10185,13 @@ function renderFAQ(animate=true){
     headerActions = `<button class="btn-sm primary" id="faqSaveClose">Save &amp; close</button>`;
   }
 
-  const searchBar = editable ? '' : `
-    <div class="faq-search-wrap">
-      <svg class="faq-search-icon" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-      <input type="text" class="faq-search-input" id="faqSearchInput" placeholder="Search questions and answers…" value="${faqEscapeAttr(faqSearchTerm)}" autocomplete="off">
-      <button type="button" class="faq-search-clear" id="faqSearchClear" ${faqSearchTerm ? '' : 'hidden'} aria-label="Clear search"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="5" y1="5" x2="19" y2="19"/><line x1="19" y1="5" x2="5" y2="19"/></svg></button>
-    </div>`;
-
-  const emptyState = `
-    <div class="faq-empty-state" id="faqEmptyState" hidden>
-      <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-      <div>No questions match <b>"${faqEscapeHtml(faqSearchTerm)}"</b>.<br>Try a different search term.</div>
-    </div>`;
-
   const html = `
     <div class="faq-head-row">
       <h1 class="field-title" style="margin:0;">Frequently Asked Questions</h1>
     </div>
-    <div class="info-note" style="margin:6px 0 0;">Answers to common questions about Cross-Market Requirements. For anything not covered here, reach out to the project engineer on Engineer Contact Info.</div>
+    <div class="info-note" style="margin:6px 0 22px;">Answers to common questions about Cross-Market Requirements. For anything not covered here, reach out to the project engineer on Engineer Contact Info.</div>
     ${headerActions ? `<div class="eng-toolbar" style="justify-content:flex-end;">${headerActions}</div>` : ''}
-    ${searchBar}
     <div class="faq-list${animate ? '' : ' faq-list-static'}" id="faqList">${itemsHtml}</div>
-    ${emptyState}
     ${editable
       ? `<button class="eng-add-row" id="faqAddRow"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>Add question</button>`
       : ''
@@ -10265,7 +10203,6 @@ function renderFAQ(animate=true){
     sheetEl.innerHTML = html;
     wireFAQ();
     syncFaqHeights();
-    updateFaqEmptyState();
   };
   if(animate){
     sheetEl.classList.add('fade');
@@ -10309,68 +10246,6 @@ function toggleFaqItem(item){
   if(btn) btn.setAttribute('aria-expanded', String(opening));
 }
 
-/* Re-evaluates search matches and highlighting in place, without touching
-   sheetEl.innerHTML — so the search input never loses focus mid-keystroke.
-   While a search is active, matched items auto-expand (so a match inside an
-   answer is actually visible, not just implied by the question staying in
-   the list) without disturbing expandedFaqIds; clearing the search restores
-   each item to whatever the person had manually opened/closed before. */
-function filterFaqList(){
-  const term = faqSearchTerm.trim().toLowerCase();
-  FAQS.forEach(f=>{
-    const item = sheetEl.querySelector(`.faq-item[data-id="${f.id}"]`);
-    if(!item) return;
-    const qRaw = (f.q||'').toString();
-    const aRaw = (f.a||'').toString();
-    const matches = !term || qRaw.toLowerCase().includes(term) || aRaw.toLowerCase().includes(term);
-    item.classList.toggle('faq-no-match', !matches);
-
-    const qEl = item.querySelector('.faq-question-text');
-    const aEl = item.querySelector('.faq-answer-text');
-    if(qEl) qEl.innerHTML = faqHighlight(faqEscapeHtml(qRaw), term);
-    if(aEl) aEl.innerHTML = faqHighlight(faqEscapeHtml(aRaw), term);
-
-    const answer = item.querySelector('.faq-answer');
-    const qBtn = item.querySelector('.faq-question');
-    if(answer){
-      const shouldBeOpen = term ? matches : expandedFaqIds.has(f.id);
-      const isOpen = item.classList.contains('expanded');
-      if(shouldBeOpen && !isOpen){
-        item.classList.add('expanded'); answer.classList.add('expanded');
-        answer.style.maxHeight = answer.scrollHeight + 'px';
-        if(qBtn) qBtn.setAttribute('aria-expanded', 'true');
-      } else if(!shouldBeOpen && isOpen){
-        answer.style.maxHeight = answer.scrollHeight + 'px';
-        void answer.offsetHeight;
-        item.classList.remove('expanded'); answer.classList.remove('expanded');
-        answer.style.maxHeight = '0px';
-        if(qBtn) qBtn.setAttribute('aria-expanded', 'false');
-      } else if(shouldBeOpen && isOpen){
-        answer.style.maxHeight = answer.scrollHeight + 'px'; // re-measure for the new highlighted content
-      }
-    }
-  });
-  const clearBtn = document.getElementById('faqSearchClear');
-  if(clearBtn) clearBtn.hidden = !faqSearchTerm;
-  updateFaqEmptyState();
-}
-
-/* Shows the "no matches" panel only when a search term is active and it
-   matched nothing — never for an ordinary empty FAQ list in view mode. */
-function updateFaqEmptyState(){
-  const emptyEl = document.getElementById('faqEmptyState');
-  const listEl = document.getElementById('faqList');
-  if(!emptyEl || !listEl) return;
-  const term = faqSearchTerm.trim();
-  const anyVisible = !!listEl.querySelector('.faq-item:not(.faq-no-match)');
-  const show = !!term && !anyVisible;
-  emptyEl.hidden = !show;
-  if(show){
-    const b = emptyEl.querySelector('b');
-    if(b) b.textContent = `"${faqSearchTerm}"`;
-  }
-}
-
 function wireFAQ(){
   const editable = isAdminSignedIn && isEditingFAQ;
 
@@ -10380,22 +10255,6 @@ function wireFAQ(){
         toggleFaqItem(btn.closest('.faq-item'));
       });
     });
-
-    const searchInput = document.getElementById('faqSearchInput');
-    if(searchInput){
-      searchInput.addEventListener('input', ()=>{
-        faqSearchTerm = searchInput.value;
-        filterFaqList();
-      });
-    }
-    const searchClear = document.getElementById('faqSearchClear');
-    if(searchClear){
-      searchClear.addEventListener('click', ()=>{
-        faqSearchTerm = "";
-        if(searchInput){ searchInput.value = ""; searchInput.focus(); }
-        filterFaqList();
-      });
-    }
 
     sheetEl.querySelectorAll('.faq-helpful-btn').forEach(btn=>{
       btn.addEventListener('click', ()=>{
